@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Hanumanthareddy H Hello world {{today}}</h1>
+
+<form action="add" method="post">
+  {% csrf_token%}
+  <label>Input 1</label>
+  <input type="text" name="input1" placeholder="A " />
+  <label>Input 2</label>
+  <input type="text" name="input2" placeholder="B" />
+
+  <button type="submit">Submit</button>
+</form>
+
+<div>
+  <h1>{{output}}</h1>
+</div>
+{% endblock content %}
